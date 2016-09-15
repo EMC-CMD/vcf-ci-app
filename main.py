@@ -21,7 +21,7 @@ def ip():
         for port in ports:
             result = s.connect_ex((ip, port))
             if result == 0:
-                return "IP "+ip+":"+port+" could be accesse by "+instance_ip
+                return "IP {}:{} could be accesse by {}".format(ip, port, instance_ip)
     s.close()
     return "CF internal IP addresses could not be reached."
 
