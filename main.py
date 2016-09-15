@@ -21,7 +21,7 @@ def ip():
         for port in ports:
             result = s.connect_ex((ip, port))
             if result == 0:
-                return "IP {}:{} could be accesse by {}".format(ip, port, instance_ip)
+                return "IP {}:{} could be access by {}".format(ip, port, instance_ip)
     s.close()
     return "CF internal IP addresses could not be reached."
 
@@ -40,7 +40,7 @@ def mysql_conn():
 
 @app.route('/')
 def hello():
-    "Hola"
+    return "Hola"
 
 if __name__ == '__main__':
   app.run('0.0.0.0', os.environ['PORT'])
